@@ -15,6 +15,10 @@ body
 	font-weight: 400;
 }
 
+a{
+    text-decoration:none !important;
+}
+
 /* start all section */
 #home,
 #home .fp-slide,
@@ -191,23 +195,24 @@ h1,h2,h3,h4,h5
     {
         padding-bottom: 10px;
     }
-#home .btn
-    {
+#home .btn {
         background: transparent;
         border: 2px solid #ffffff;
         color: #ffffff;
         font-size: 16px;
         font-weight: bold;
-        width: 180px;
+        /* width: 180px; */
         height: 60px;
         margin-top: 40px;
         padding-top: 18px;
         transition: all 0.4s ease-in-out;
+        text=decoration:none;
     }
-#home .btn:hover
-    {
+    
+#home .btn:hover {
         background: #D43F52;
         border-color: transparent;
+        text=decoration:none;
     }
 /* end home */
 

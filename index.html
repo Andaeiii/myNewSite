@@ -29,10 +29,13 @@
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <!-- custom -->
     <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/hystmodal.min.css">
 
 </head>
 
 <body>
+
+
 
     <div id="fullpage">
 
@@ -41,9 +44,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-2"></div>
-                    <div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+                    <div id="hcomps" class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
                         <h3>Ande Caleb</h3>
-                        <h1>Open for Remote</h1>
+                        <a href="javascript:;">Open for Remote</a>
                         <h2 class="rotate">Senior FrontEnd Developer, With Years of Experience in, Javascript + Typescript Development, CSS3(Tailwind + Bootstrap + Material), React + Redux + NextJS, with core front-end logic, + Designer(Photoshop / Figma / Fireworks ) </h2>
                         <p>Senior Frontend Developer - Javascript / React / Tailwind / Typescript Focused - Open for remote offers, here's all you need to know about me while you ready your phones/mails to reach me</p>
                         <a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">Get started</a>
@@ -136,17 +139,21 @@
                     <div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
                         <span class="text-top">React / Redux / Typescript <small>90%</small></span>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
                         </div>
                         <span>CSS3(Tailwind, Bootstrap++) <small>95%</small></span>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
                         </div>
                         <span>UI Design Templating <small>100%</small></span>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                         </div>
                         <span>UX Logic & State Management <small>99%</small></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 99%;"></div>
+                        </div>
+                        <span> SVG & HTML5 & CSS3 Animations <small>90%</small></span>
                         <div class="progress">
                             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
                         </div>
@@ -225,8 +232,8 @@
                         <address>
 							<p class="contact-title">FIND ME ON</p>
 							<p><i class="fa fa-github"></i> <a target="_blank" href="https://www.github.com/andaeiii">Github</a></p>
+							<p><i class="fa fa-linkedin"></i> <a target="_blank" href="https://www.linkedin.com/in/ande-caleb">LinkedIn</a></p>
 							<p><i class="fa fa-stack-overflow"></i> <a target="_blank" href="https://stackoverflow.com/users/2251071/ande-caleb">Stackoverflow</a></p>
-							<p><i class="fa fa-linkedin"></i> <a target="_blank" href="https://www.linkedin.com/in/ande-caleb">Dev.to</a></p>
 							<p><i class="fa fa-slack"></i> <a target="_blank" href="https://www.dev.to/andaeiii">Dev.to</a></p>
 							<br/>
 							<p>...CV available on request.</p>
@@ -234,10 +241,10 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
                         <form role="form" method="post" action="#">
-                            <input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
-                            <input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
-                            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message"></textarea>
-                            <input name="send" type="submit" class="form-control" id="send" value="SEND ME">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Your Name / Company's Name">
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Your Email (optional)">
+                            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message / Request CV (Resume) Message"></textarea>
+                            <input name="send" type="submit" class="form-control" id="send" value="SEND MESSAGE TO ME">
                         </form>
                     </div>
                     <div class="col-md-1 col-sm-1"></div>
@@ -253,6 +260,42 @@
             
             .front-icons li {
                 margin: 0px 10px !important;
+            }
+            
+            #hcomps>a {
+                display: block;
+                border: 2px solid #b7ba0f;
+                font-weight: bolder;
+                color: #ffffff;
+                display: inline-block;
+                letter-spacing: 6px;
+                padding: 25px 35px;
+                margin: 30px 0;
+                font-size: 30px;
+            }
+            
+            #hcomps>a:hover {
+                border: none;
+                border: 2px solid #eedb2e
+            }
+            
+            .experiment {
+                position: fixed;
+                bottom: 10px;
+                right: 20px;
+                z-index: 10000;
+            }
+            
+            .experiment .img {
+                opacity: 0.3;
+            }
+            
+            .experiment span {
+                display: block;
+            }
+            
+            .experiment:hover .img {
+                opacity: 1;
             }
         </style>
 
@@ -286,6 +329,45 @@
 
     </div>
 
+
+    <a href="#" data-hystmodal="#mymodalBox" class="experiment" title="visit the css3 experiments page...">
+        <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:none;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <circle cx="18" cy="50" r="4" fill="#e15b64">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"></animate>
+            </circle><circle cx="27" cy="61.31370849898476" r="4" fill="#f47e60">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.125s" repeatCount="indefinite"></animate>
+            </circle><circle cx="36" cy="66" r="4" fill="#f8b26a">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.25s" repeatCount="indefinite"></animate>
+            </circle><circle cx="45" cy="61.31370849898476" r="4" fill="#abbd81">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.375s" repeatCount="indefinite"></animate>
+            </circle><circle cx="54" cy="50" r="4" fill="#e15b64">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.5s" repeatCount="indefinite"></animate>
+            </circle><circle cx="63" cy="38.68629150101524" r="4" fill="#f47e60">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.625s" repeatCount="indefinite"></animate>
+            </circle><circle cx="72" cy="34" r="4" fill="#f8b26a">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.75s" repeatCount="indefinite"></animate>
+            </circle><circle cx="81" cy="38.68629150101523" r="4" fill="#abbd81">
+              <animate attributeName="cy" values="34;66;34" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.875s" repeatCount="indefinite"></animate>
+            </circle>
+            </svg></span>
+        <span class="img"><img src="/images/exp.png" width="150"/></span>
+    </a>
+
+
+    <div class="hystmodal" id="mymodalBox" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+
+
+                <h1> my modal box...</h1>
+
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- bootstrap -->
@@ -300,7 +382,10 @@
     <script src="js/jquery.simple-text-rotator.js"></script>
     <!-- custom -->
     <script src="js/custom.js"></script>
+    <script src="js/hystmodal.min.js"></script>
+    <script type="text/javasript">
 
+    </script>
 </body>
 
 </html>
