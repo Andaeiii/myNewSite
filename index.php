@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  
+     <?php
+        function rn($length = 40) {
+            return substr(str_shuffle(str_repeat('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', $length)), 0, $length);
+        }
+
+      ?>
 
 <head>
     <meta charset="utf-8">
@@ -28,7 +35,8 @@
     <!-- fullpage -->
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <!-- custom -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/styles.css?<?php echo rn(); ?>">
+  
     <link rel="stylesheet" href="css/hystmodal.min.css">
 
 </head>
@@ -40,7 +48,56 @@
     <div id="fullpage">
 
         <!-- start home -->
-        <div id="home" class="section">
+        <div id="home" class="section video-background">
+
+            <video autoplay muted loop class="video">
+                <source src="./vidx/bgvid_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="v-overlay"></div>
+          
+          
+          
+          
+          <style>
+            #home{
+              overflow:hidden;
+            }
+            
+          	    .video-background {
+                  position: relative;
+                  height: 100vh; /* Full viewport height */
+                  width: 100vw; /* Full viewport width */
+                  overflow: hidden; /* Prevent video overflow */
+                }
+
+                .v-overlay{
+                  width:100%; 
+                  height:100%; 
+                  background-color:black;
+                  position:absolute; 
+                  top:0; 
+                  left:0;
+                  object-fit:cover; 
+                  opacity:0.6
+                }
+
+
+                .video-background .video {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%; /* Stretch to full width */
+                  height: 100%; /* Stretch to full height */
+                  object-fit: cover; /* Ensures the video fills the viewport */
+                  z-index: -1; /* Sends the video behind other content */
+                }
+            
+          </style>
+          
+          
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-2"></div>
@@ -57,7 +114,7 @@
                 <br/>
                 <div class="row">
                     <div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
-                        <ul class="social-icon front-icons">
+                        <ul class="social-icon front-icons" style="display: flex; justify-content: center;">
                             <li>
                                 <a target="_blank" href="https://www.github.com/andaeiii" class="fa fa-github fa-2x"></a>
                             </li>
@@ -121,7 +178,9 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+                  <!-- 
+
+                     <div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="media">
                             <div class="media-object media-left">
                                 <i class="fa fa-paper-plane"></i>
@@ -132,6 +191,8 @@
                             </div>
                         </div>
                     </div>
+
+				   -->
 
                 </div>
             </div>
@@ -157,9 +218,9 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
                         </div>
-                        <span>UI Design Templating <small>100%</small></span>
+                        <span>ThreeJS + WebGL + GSAP <small>80%</small></span>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
                         </div>
                         <span>UX Logic & State Management <small>99%</small></span>
                         <div class="progress">
@@ -397,7 +458,7 @@
     <!-- text rotater -->
     <script src="js/jquery.simple-text-rotator.js"></script>
     <!-- custom -->
-    <script src="js/custom.js"></script>
+    <script src="js/custom.js?<?php echo rn(); ?>"></script>
     <script src="js/hystmodal.min.js"></script>
     <script type="text/javasript">
 

@@ -1,14 +1,7 @@
 :root {
-    --primary-color: #3bbb33;
+    --primary-color: #2dad05;
 }
-
-/*
-
-Lavish HTML CSS Template
-
-https://templatemo.com/tm-458-lavish
-
-*/
+ 
 
 body {
     background: #000000;
@@ -16,6 +9,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 400;
+	overflow-x:hidden !important;
 }
 
 a {
@@ -241,10 +235,10 @@ h1, h2, h3, h4, h5 {
 
 /* end work */
 
-/* start about */
+ 
 #about h4 {
     padding: 15px 0;
-    color: #58d43f;
+    color: var(--primary-color);
 }
 
 #about .progress {

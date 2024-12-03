@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experiments - Animations + Frontend Tests (Andaeiii.co)</title>
+    <link type="text/css" rel="stylesheet" href="./styles.css" />
+    <script src="./libs/createjs.min.js"></script>
+</head>
+<body>
+
+
+    <div id="infopg" class="tp">
+        <h1>JS Experiments</h1>
+            <span class="msgg tpx"> Canvas Animations using - 
+                <a href="https://createjs.com/" target="_blank" title="Rich interactive HTML5 Animation Library">CreateJS</a>, 
+                <a href="https://greensock.com/" target="_blank" title="Modern Web Animation Library Framework">Greensock GSAP</a>, 
+                <a href="https://threejs.org/" target="_blank" title="3D Javascript library via WebGL on browsers">ThreeJS</a> & <a href="https://reactjs.org" target="_blank" title="JS Front-end SPA library">React</a> 
+            </span>
+        
+       
+        <br/>
+
+        <span class="tasks">:: On-going Tasks</span>
+        <span class="p_done">1. Ping pong (background) &nbsp; <img src="./imgs/mark.png" align="absmiddle" width="30" alt="..checked(done)"/></span>
+        <span class="p_done">2. Bird game(click to play) &nbsp; <img src="./imgs/mark.png" align="absmiddle" width="30" alt="..checked(done)"/></span>
+        <span>3. Add scoring to the Game &nbsp; <img src="./imgs/progress.png" align="absmiddle" width="30" alt="..in-progress"/></span>
+        <span class="p_done">4. Track Loading Progress...&nbsp; <img src="./imgs/mark.png" align="absmiddle" width="30" alt="..checked(done)"/></span>
+        <span class="p_done">5. Make coloured dots blink&nbsp; <img src="./imgs/mark.png" align="absmiddle" width="30" alt="..checked(done)"/></span>
+        <br/>
+
+        <span class="msgg"> 
+            Use controls below to manipulate the velocity of the ball and also the speed, on both axis... 
+        </span>
+        <br/>
+        <div class="ctrls">
+            <div>
+                <span>Velocity-X</span>
+                <select id="vxobj" onchange="setWProp(this,'vx')">
+                    <option> change vx </option>
+                </select>
+            </div>
+            <div>
+                <span>Velocity-Y</span>
+                <select id="vyobj" onchange="setWProp(this, 'vy')">
+                    <option>change vy </option>
+                </select>
+            </div>
+            <div>
+                <span>Speed</span>
+                <select id="spobj" onchange="setWProp(this, 'sp')">
+                    <option>change speed </option>
+                </select>
+            </div>
+        </div>
+
+
+
+        <a class="by" href="https://www.andaeiii.co" target="_blank">by Ande Caleb (Senior Frontend Dev)</a>
+
+
+    </div>
+
+
+    <canvas class="gamecanvas" id="gameCanvas" width="320" height="480"></canvas>
+       
+    <iframe id="pingObj" src="pingpong.html" frameborder="6"></iframe>    
+
+    <script src="./js/game.js"></script>
+
+    <script>
+
+        (function() {
+            var cvv = document.getElementById('gameCanvas');
+            window.addEventListener('resize', resizeCanvas, false);
+
+            init();
+            //startPingPong();
+
+            function resizeCanvas() {
+                window.location.reload();
+                cvv.width = window.innerWidth;
+                cvv.height = window.innerHeight;
+                if(window.innerWidth < 800){
+                    //alert('not for mobile, yet');
+                    return;
+                }
+                init();
+                //startPingPong();
+            }
+
+            const getRange = (start, end) => Array(end - start + 1).fill().map((_, idx) => start + idx);  //get range of values... 
+        
+
+            const populateSelObjs = () => {
+                let objs = ['vxobj','vyobj','spobj'];
+                objs.forEach(o => {
+                    let spd = 0;
+                    let vx = getRange(1, 40).map(v => {
+                        spd = (o != 'spobj') ? v/10 : (v/10)+(2 * v) ; 
+                        return `<option value="${spd}">${spd} m/s </option>`;
+                    });  
+                    str = ['<option>change value..</option>', ...vx].join('');
+                   // console.log(str);
+                    document.getElementById(o).innerHTML = str;
+                });
+            }
+            populateSelObjs();
+
+        })();
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

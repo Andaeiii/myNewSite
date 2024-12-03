@@ -1,0 +1,164 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+body{
+    background:black;
+    margin:0px !important;
+    display:flexbox;
+}
+
+.main{
+    position: relative;
+    z-index: 0;
+}
+
+.tp{
+    position: absolute;
+    display: block;
+    font-size:30px;
+    font-weight: bolder;
+    color:white;
+    z-index: 1000;
+
+    top:10px;
+    left:100px;
+}
+
+.tp > h1{
+    margin-bottom: 0px !important;
+}
+
+.tp > span{
+    display:block;
+    margin-bottom: 10px;
+    color:yellow;
+}
+
+
+.gamecanvas{
+    position: absolute;
+    z-index: 100;
+    display:block; 
+    right:10%; 
+    top:100px;
+    border:solid 3px #ccc;
+
+}
+
+iframe{
+    border: none !important;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    z-index: 0;
+    top:0px;
+    left: 0px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border: 0;
+    overflow: hidden;
+    display: block;
+}
+
+
+.tasks{
+    color:rgb(60, 255, 60) !important;
+}
+
+.msgg{
+    width:350px;
+    font-size:11px !important;
+    color:rgb(147, 148, 148) !important;
+    text-shadow: #000 2px 2px 2px;
+}
+
+
+.bgcanvas{
+    background-color: rgb(35, 35, 36);
+}
+
+.ctrls{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:380px;
+}
+
+.tpx{
+    color:#ccc !important;
+    margin-top:5px;
+    width:450px;
+}
+
+.tpx a{
+    color:rgb(9, 212, 145);
+    text-decoration: none;
+}
+
+.tpx a:hover{
+    color:yellow;
+}
+
+.p_done{opacity:0.4}
+
+.ctrls > div > span{
+    display: block;
+    font-size:14px;
+}
+
+.ctrls > div > select{
+    padding:5px !important;
+    margin:0px !important;
+    width:120px;
+    color:rgb(75, 69, 69);
+}
+
+.by{
+    font-size:13px; 
+    display: block; 
+    width:250px; 
+    margin-top:80px;
+    color:aquamarine;
+    text-decoration: none;
+}
+
+.by:hover{
+    color: yellow;
+}
+
+
+@media (max-width: 600px) {
+   .tp > *:not(.ctrls, .msgg){
+    display: none !important;
+   }
+
+   .ctrls{
+      position:fixed;
+      z-index:10000;
+      bottom:40px;
+      left:5%;
+   }
+
+   .tpx{
+    display: none !important;
+   }
+
+   .msgg{
+        position:fixed;
+        z-index: 10000;
+        bottom:100px;
+        left:5%;
+        color:#fff !important;
+   }
+
+   .gamecanvas{
+      margin:0px auto !important;
+   }
+}
+
